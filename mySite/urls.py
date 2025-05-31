@@ -1,41 +1,27 @@
 """
-URL configuration for mySite project.
+URL configuration for the Django project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+This file defines the mapping between URL paths and the views that handle them.
+Each path in the urlpatterns list routes a URL to a view function.
 """
 
 from django.contrib import admin
-from django.urls import path, include
-from personal import views
-#from eShopping import views
+from django.urls import path  # Required to define URL patterns
 
-'''from personal.views import(home_screen_view,)
-from personal.views import(products_view,)
+# Import views from the personal app
+from personal import views as personal_views
 
+# Import views from the eshopping app
+from eshopping import views as shopping_views
 
+# List of URL patterns to route incoming HTTP requests
 urlpatterns = [
-    path("admin/", admin.site.urls),    
-    path('', include('personal.urls')), 
-    
-]
-from django.urls import path
-from personal import views  # Adjust if the view is in a different app'''
-
-urlpatterns = [
+    # Admin site URL
     path("admin/", admin.site.urls),
-    path("", views.home_screen_view, name="home"),
-   # path("products/", views.product_list_view, name="products"),
-    path("eShopping/", views.eshopping, name="eShopping"),  # <-- Add this line
-]
 
+    # Home page view (root URL)
+    path("", personal_views.home_screen_view, name="home"),
+
+    # eShopping page view
+    path("eShopping/", shopping_views.eshopping, name="eShopping"),
+]

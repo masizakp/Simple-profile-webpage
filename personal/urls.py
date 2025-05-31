@@ -1,19 +1,21 @@
-'''# personal/urls.py
-from django.urls import path
-from . import views
+"""
+URL configuration for the Django project.
 
-urlpatterns = [
-    path('', views.home_screen_view, name='home'),
-    path('products/', views.products_view, name='products'),
-]'''
+This module maps URL paths to corresponding view functions.
+Currently, it routes:
+- the root URL ('') to the home_screen_view in the personal app
+- the 'admin/' URL to the Django admin site
+"""
 
 from django.contrib import admin
 from django.urls import path
-from personal import views  # Make sure this matches your actual app name
+from personal import views  # Import views from the personal app
 
+# Define URL patterns to map paths to views
 urlpatterns = [
+    # Route for the Django admin interface
     path("admin/", admin.site.urls),
+
+    # Route for the home page
     path("", views.home_screen_view, name="home"),
-   # path("products/", views.product_list_view, name="products"),
-    path("eShopping/", views.eshopping, name="eShopping"),  # optional, if added
 ]

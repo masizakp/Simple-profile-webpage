@@ -1,17 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+# View function for the home screen
 def home_screen_view(request):
-	print(request.headers)
-	return render(request,"base.html",{})
-	
-'''def products_view(request):
-	print(request.headers)
-	return render(request,"eShopping.html",{})'''
-
-def eshopping(request):
-    return render(request, "eshopping.html", {})
-
-
-
-
+    # Logs the request headers to the console (for debugging purposes)
+    print(request.headers)
+    # Renders the 'base.html' template without any context data
+    return render(request, "base.html", {})

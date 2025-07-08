@@ -1,2 +1,10 @@
-# Django my profile webpage
-To build a dynamic "About You" website using Django, which showcases personal information and integrates additional HTML pages with proper URL routing. This project focuses on basic Django web development, emphasizing template rendering, URL configuration, and app integration.
+# Django Capstone Project
+
+## Setup with Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver

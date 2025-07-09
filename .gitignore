@@ -1,32 +1,6 @@
-# Python
-*.pyc
 __pycache__/
-*.pyo
-
-# Virtual Environment
-env/
-venv/
-ENV/
-.venv/
-.Python
-
-# Django stuff:
-*.log
-*.pot
 *.pyc
+.env
 db.sqlite3
-media/
-staticfiles/
-
-# IDEs and editors
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Sphinx docs build
-/docs/_build/
+*.log
+venv/

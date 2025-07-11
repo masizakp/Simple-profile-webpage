@@ -1,8 +1,19 @@
+"""
+URL configuration for the polls app.
+
+This module defines all the URL patterns used in the polls application,
+including question views, voting logic, blog-style posts, and user authentication.
+
+Each URL is connected to a specific view in the `polls.views` module or includes external routes.
+"""
+
 from django.urls import path, re_path, include
 from . import views
 
+#: App namespace for URL reversing (e.g., {% url 'polls:detail' question.id %})
 app_name = 'polls'
 
+#: URL patterns for the polls application
 urlpatterns = [
     # Homepage of the polls app – shows the latest questions
     path('', views.index, name='index'),
@@ -24,7 +35,7 @@ urlpatterns = [
         name='blog_detail'
     ),
 
-    # Includes Django's built-in authentication views (e.g., login, logout)
+    # Includes Django's built-in authentication views (e.g., login, logout, password management)
     path('user_auth/', include("django.contrib.auth.urls")),
 
     # Includes custom authentication app URLs (e.g., signup, profile)

@@ -1,10 +1,34 @@
-# Django Capstone Project
+# 🎸 MyBand Django Project
 
-## Setup with Virtual Environment
+## 📘 Overview
+MyBand is a Django-based web application created as part of a capstone project.  
+It includes user authentication, personal profile pages, and band-related content such as event listings.  
+The project has been containerised using Docker and includes auto-generated documentation via Sphinx.
 
+---
+
+## 🚀 Features
+- User login and registration
+- Profile management
+- Dynamic band page content
+- Admin panel for managing content
+- Mobile responsive interface
+- Docker containerisation
+- Sphinx documentation (`docs/` folder)
+
+---
+
+## 🛠️ Technologies Used
+- Python 3.x
+- Django 4.x
+- SQLite
+- HTML/CSS
+
+---
+
+## 📦 Installation
+
+### Clone the repository
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+git clone https://github.com/masizakp/Simple-profile-webpage.git
+cd Simple-profile-webpage
